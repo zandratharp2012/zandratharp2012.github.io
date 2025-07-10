@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+/* Base body styles: deep gradient, soft font, light text */
+body {
+  margin: 0;
+  font-family: 'Inter', 'Segoe UI', Roboto, Arial, sans-serif;
+  background: linear-gradient(to bottom right, #0f1f3f, #a7e5f9);
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* Main page containers, softly centered with that bubbly edge */
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 10%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+
+  /* Smooth scaling, anchored center */
+  transform-origin: center;
+  will-change: transform;
+}
+
+/* Light lift on hover*/
+.hover-section:hover {
+  transform: scale(1.01);
+}
+
+/* bold banner that grabs attention */
+.hero-banner {
+  padding: 3rem 2rem;
+  background: linear-gradient(to right, #102a60, #38b6ff);
+  color: white;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* name & photo side-by-side and responsive */
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+/* Profile photo, circular with a bit of depth */
+.profile-pic {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Hero text */
+.hero-text h1 {
+  font-size: 2.7rem;
+  margin: 0;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  color: #e5faff;
+}
+
+/* Highlight section*/
+#highlight {
+  background-color: #ffffff;
+  color: #333;
+  border-radius: 10%;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+#highlight h2 {
+  color: #0056b3;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+#highlight p {
+  font-size: 1.1rem;
+}
+
+/* Project cards, stand out blocks with hover lift */
+.card {
+  background-color: rgba(255, 255, 255, 0.07);
+  border-radius: 10%;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  margin-bottom: 2rem;
+  padding: 1.5rem 2rem;
+  transform-origin: center;
+  will-change: transform;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.01);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #fff;
+  font-weight: 600;
+}
+
+.card p,
+.card ul,
+.card a {
+  color: #e0f0ff;
+}
+
+/* Links, branded blue, subtle underline on hover */
+a {
+  color: #38b6ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-top: 3rem;
+}
