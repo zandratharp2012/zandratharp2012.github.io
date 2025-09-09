@@ -2,10 +2,25 @@
 
 body {
   margin: 0;
-  font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
-  background-color: #fdf7ef;
-  color: #333;
-  line-height: 1.6;
+  height: 100vh;
+display: flex;
+justify-content: center;  
+font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+  background-image: url('purple2.jpg');   
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #fdf7ef;   color: #333;
+padding-top: 10px;   line-height: 1.6;
+}
+
+
+.Container-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 /* Container Section Container */
@@ -30,20 +45,7 @@ body {
   flex-wrap: wrap;
 }
 
-.Pop-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 500px;
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 2rem;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-  padding: 2rem 2.5rem;
-  flex-wrap: wrap;
-  position: relative;
-}
-
-/* Zandra's photo */
+/* My photo */
 .Container-photo {
   width: 180px;
   height: 180px;
@@ -55,7 +57,8 @@ body {
 /* Text next to photo */
 .Container-details {
   flex: 1;
-  min-width: 280px;
+  width: 800px;
+text-align: center;
 }
 
 .Container-details h1 {
@@ -66,13 +69,15 @@ body {
 .Container-details p {
   font-size: 1.1rem;
   margin-bottom: 1.5rem;
+text-align: center;
 }
 
 /* Easter-colored buttons */
 .Container-buttons {
   display: flex;
+  justify-content: center;
   gap: 1rem;
-  flex-wrap: wrap;
+  margin-top: 1.5rem;
 }
 
 .easter-btn {
@@ -101,81 +106,21 @@ body {
 .easter-btn.green {
   background-color: #9ddc97;
 }
-.module {
-   display: none; /* This hides it by default */
-  position: flex;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-
+.icon-bar {
+  margin-top: 1rem;
+  display: flex;
   justify-content: center;
-  align-items: center;
+  gap: 1.5rem;
 }
 
-.module-content {
-  background: #fff;
-  margin: 10% auto;
-  padding: 20px;
-  border-radius: 8px;
-  width: 80%;
-  max-width: 600px;
-  text-align: center;
-}
-
-.close {
-  float: right;
-  font-size: 28px;
+.icon {
+  width: 32px;
+  height: 32px;
   cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.project-gallery img {
-  width: 100px;
-  margin: 10px;
-  border-radius: 4px;
-  transition: transform 0.3s;
-}
-
-.project-gallery img:hover {
+.icon:hover {
   transform: scale(1.1);
+  filter: drop-shadow(0 0 6px #00ffff); /* Neon glow on hover */
 }
-
-body {
-  margin: 0;
-  overflow-x: hidden;
-  position: relative;
-  z-index: 1;
-}
-
-.Container-section,
-.module {
-  position: relative;
-  z-index: 2;
-}
-
- 
-/* Matrix Canvas Background */ 
-#matrixCanvas 
-{position: fixed; top: 0; left: 0; width: 100vw; 
-height: 100vh; z-index: -1; background: #ffffff; 
-pointer-events: none; } 
-body { margin: 0; overflow-x: hidden; position: 
-relative; z-index: 1; } 
-.Container-section, 
-.module { position: relative; z-index: 2; } 
-
-#waterfallCanvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  background: transparent;
-  pointer-events: none;
-}
-
-.Pop-card {
-  position: relative;
-  z-index: 1;}

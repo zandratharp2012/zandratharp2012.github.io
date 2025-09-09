@@ -5,113 +5,33 @@
 
 
 </head> 
-<body> 
-<!-- Matrix Background Canvas --> 
-<canvas id="matrixCanvas"></canvas> 
+	<body>   
+<header class="Container-header">
+<div class="Container-card">
+  <div class="Container-photo-wrapper">
+    <img src="zandra-photo.jpg" alt="Photo of Zandra Tharp" class="Container-photo" />
 
-<section class="Container-section"> 
-<div class="Container-card"> 
-	<img src="zandra-photo.jpg" alt="Photo of Zandra Tharp" class="Container-photo" /> 
-	<div class="Container-details"> 
+    <div class="icon-bar">
+      <a href="https://www.linkedin.com/in/zandratharp" target="_blank">
+        <img src="linkedin.png" alt="LinkedIn" class="icon" />
+      </a>
+      <a href="mailto:zandra_tharp2012@live.com">
+        <img src="outlook.png" alt="Email" class="icon" />
+      </a>
+    </div>
+  </div>	
+<div class="Container-details"> 
+
+
 		<h1>Greetings! I'm Zandra Tharp</h1> 
 		<p> I'm a solutions-driven Systems Analyst with over a decade of experience in technical support, data analytics, and full-stack development. 
-			I have a passion for clean design and clever automation. </p> 
-		<div class="Container-buttons"> 
-		<a href="resume.pdf" class="easter-btn pink" download>Resume</a> 
-		<a href="#projects" class="easter-btn blue">Projects</a> 
-		<a href="#skills" class="easter-btn green">Skills</a> 
-		</div> 
-	</div> 
-</div> 
-
-</section> 
-<div id="projectsModule" class="module">
-<canvas id="waterfallCanvas"></canvas>
-<div class="Pop-card"> 
-<span class="close">&times;</span>
-<h2>Project Snapshots</h2> <div class="project-gallery"> 
-<img src="project1.jpg" alt="Project 1" /> 
-<img src="project2.jpg" alt="Project 2" />
- <img src="project3.jpg" alt="Project 3" /> 
+		 I have a passion for clean design and clever automation. </p> 
+		<div class="Container-buttons">
+  <a href="resume.pdf" class="easter-btn pink" download>Resume <span class="download-icon">⤓</span></a>
+  <a href="https://github.com/zandratharp2012/Blazor.git" class="easter-btn blue" target="_blank">Projects</a>
+  </div>
 </div> 
 </div> 
-</div>
-
-<script> 
-const module = document.getElementById("projectsModule"); 
-const trigger = document.querySelector("a[href='#projects']"); 
-const close = document.querySelector(".close"); 
-
-trigger.addEventListener("click", e => {
-  e.preventDefault();
-  module.style.display = "flex";
-  startWaterfall();
-});
-
-close.addEventListener("click", () => {
-  module.style.display = "none";
-  stopWaterfall();
-});
-
-window.addEventListener("click", e => {
-  if (e.target === module) {
-    module.style.display = "none";
-    stopWaterfall();
-  }
-});function startWaterfall() {
-  waterfallCanvas = document.getElementById("waterfallCanvas");
-  waterfallCtx = waterfallCanvas.getContext("2d");
-
-  waterfallCanvas.width = waterfallCanvas.offsetWidth;
-  waterfallCanvas.height = waterfallCanvas.offsetHeight;
-
-  const snippets = [
-    "def fetch_data():",
-    "for i in range(10):",
-    "print('Hello World')",
-    "class User:",
-    "public void Execute()",
-    "if (x > y) return;",
-    "Console.WriteLine(\"Done\");",
-    "import numpy as np",
-    "using System;",
-    "try { ... } catch {}",
-    "lambda x: x * 2",
-    "List<string> names = new();"
-  ];
-
-  const fontSize = 14;
-  const columns = Math.floor(waterfallCanvas.width / fontSize);
-  waterfallDrops = Array.from({ length: columns }, () =>
-  Math.floor(Math.random() * (waterfallCanvas.height / fontSize))
-);
-
-  function drawWaterfall() {
-    waterfallCtx.clearRect(0, 0, waterfallCanvas.width, waterfallCanvas.height);
-    waterfallCtx.fillStyle = "#ccc";
-    waterfallCtx.font = fontSize + "px monospace";
-
-    for (let i = 0; i < waterfallDrops.length; i++) {
-      const text = snippets[Math.floor(Math.random() * snippets.length)];
-      waterfallCtx.fillText(text, i * fontSize, waterfallDrops[i] * fontSize);
-
-      if (waterfallDrops[i] * fontSize > waterfallCanvas.height && Math.random() > 0.975) {
-        waterfallDrops[i] = 0;
-      }
-
-      waterfallDrops[i] += 0.5;
-    }
-  }
-
-  waterfallInterval = setInterval(drawWaterfall, 100);
-}
-
-function stopWaterfall() {
-  clearInterval(waterfallInterval);
-}
-
-
-</script> 
-
+</header>
 </body> 
 </html>
